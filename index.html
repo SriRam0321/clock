@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>  
+  
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="responsive/responsive.css">
+    <link rel="stylesheet" href="Font/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="owl/owl.theme.default.min.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	
+	<title>Digital Clock</title>
+		  <style>
+			#clock {
+			  display:flex;
+			  height:100vh;
+			  font-size: 100px;
+			  font-weight:50px;
+			  text-align: center;
+			  justify-content:center;		 
+    </style>
+	
+	<script>
+						helloWorld: function hello(){
+						let today=new Date();
+						<!-- console.log(today); -->
+
+
+					let hours=document.getElementById("hour");
+					let hour=today.getHours();
+		                 if(hour<=9){
+						minutes.innerHTML="0"+hour
+						}
+						else{
+							hours.innerHTML=hour;
+						}
+						<!-- console.log(hour); -->
+
+
+
+					let pm=document.getElementById("am");
+				
+		                 if(hour>=12){
+						am.innerHTML="PM"
+						}
+						else{
+							am.innerHTML="AM";
+						}
+						<!-- console.log(hour); -->
+
+
+
+
+
+					let minutes=document.getElementById("minutes");
+					let minute=today.getMinutes();
+						if(minute<9){
+						minutes.innerHTML="0"+minute
+						}
+						else{
+						minutes.innerHTML=minute;
+						}
+						<!-- console.log(minute); -->
+
+
+					let sec=document.getElementById("seconds")
+					let second=today.getSeconds();
+					  if(second<=9){
+					     sec.innerHTML="0"+second
+					  }
+				
+						else{
+					     sec.innerHTML=second
+					  }
+					<!-- sec.innerHTML=second; -->
+                       					
+						<!-- console.log(second); -->
+
+
+
+					let year=document.getElementById("year");
+					let years=today.getFullYear();
+						year.innerHTML=years;
+						 <!-- console.log(year) -->
+
+
+					let date=document.getElementById("date");
+					let dates=today.getDate();
+						if(dates<=9){
+						date.innerHTML="0"+dates
+						}
+						else{
+						date.innerHTML=dates;
+                          }
+
+					let month=document.getElementById("month");
+					let months=today.getMonth();
+						if(months<=9){
+						month.innerHTML="0"+months
+						}
+                        else{		
+                   		month.innerHTML=months;
+						 }
+						 <!-- console.log(month) -->
+						
+
+						
+						
+					}
+					setInterval(hello,1000);
+	
+	</script>
+	
+	</head>
+	
+	<body >
+	<div class="row justify-content-center bg-light text-light align-items-center vh-100 ">
+
+
+	<div class="col-lg-4 col-10 py-5 clock-bg border rounded text-dark">
+		
+					<h1 class="text-center" id="ampm"></h1>
+		<div class="text-center py-2 text-dark d-flex">
+			
+		<div class="col-12 row justify-content-between">
+	     	
+		    	<div class="text-center mb-5 fs-3">
+		    	<div id="am">
+			</div>
+			</div>
+		
+			     <div class="text-center col-4">
+					<div id="hour" class="fs-1"></div>
+					<h4 class="letter">hr</h4>
+				 </div>
+	
+				<div class="text-center col-4">
+					<div id="minutes" class="fs-1"></div>
+					<h4 class="letter">Min</h4>
+				</div>
+			
+				
+				<div class="text-center col-4">
+					<div id="seconds" class="fs-1"></div>
+					<h4 class="letter">sec</h4>
+				</div>
+	
+	
+				<div class="text-center col-4 mt-2">
+					<div id="date" class="fs-1"></div>
+					<h4 class="letter">Date</h4>
+				</div>
+		
+				<div class="text-center col-4 mt-2">
+							<div id="month" class="fs-1"></div>
+							<h4 class="letter">Month</h4>
+						</div>
+
+				<div class="text-center col-4 mt-2">
+							<div id="year" class="fs-1"></div>
+							<h4 class="letter">Year</h4>
+						</div>
+					
+				</div> 
+				</div> 
+				</div> 
+				
+				
+<script src="style/java.js"> </script>	
+</body>
+</html>
